@@ -1,0 +1,40 @@
+<zen-scroll-area>
+
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Normal:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-time-field zen-stretch="::'false'"
+                            zen-model="appCtrl.tmpModel.timeField1"></zen-time-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Stretch:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-height="::'5rem'" zen-padding="::'5px'">
+
+            <zen-time-field zen-stretch="::'true'"
+                            zen-model="appCtrl.tmpModel.timeField2"></zen-time-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Disabled:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-time-field zen-stretch="::'false'"
+                            zen-disabled="::true"
+                            zen-model="appCtrl.tmpModel.timeField3"></zen-time-field>
+
+        </zen-vertical-layout-row>
+    </zen-vertical-layout>
+
+</zen-scroll-area>

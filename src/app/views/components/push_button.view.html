@@ -1,0 +1,113 @@
+<zen-scroll-area>
+
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Normal:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-click="appCtrl.pushButtonOnClick()">Ordinary</zen-push-button>
+            <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.BRANDED" zen-click="appCtrl.pushButtonOnClick()" zen-disabled="::false">Branded</zen-push-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Disabled:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-click="appCtrl.pushButtonOnClick()" zen-disabled>Ordinary</zen-push-button>
+            <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.BRANDED" zen-click="appCtrl.pushButtonOnClick()" zen-disabled="::true">Branded</zen-push-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Stretch:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'" zen-height="::'5rem'">
+            <zen-push-button zen-stretch="::ZEN.BUTTON.STRETCH.TRUE" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-click="appCtrl.pushButtonOnClick()">Ordinary</zen-push-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Stretch Y:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'" zen-height="::'5rem'">
+            <zen-push-button zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_Y" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-click="appCtrl.pushButtonOnClick()">Ordinary</zen-push-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Stretch X:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-push-button zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-click="appCtrl.pushButtonOnClick()">Ordinary</zen-push-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Conjoined buttons:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-conjoined-buttons>
+                <zen-link-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">1</zen-link-button>
+                <zen-link-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">2</zen-link-button>
+                <zen-link-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">3</zen-link-button>
+                <zen-link-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">4</zen-link-button>
+            </zen-conjoined-buttons>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'" zen-height="::'5rem'">
+            <zen-conjoined-buttons>
+                <zen-link-button zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_Y" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">1</zen-link-button>
+                <zen-link-button zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_Y" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">2</zen-link-button>
+                <zen-link-button zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_Y" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">3</zen-link-button>
+                <zen-link-button zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_Y" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-href="::'/'">4</zen-link-button>
+            </zen-conjoined-buttons>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-horizontal-layout zen-height="::'5rem'">
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined="::'first'">1</zen-push-button>
+                </zen-horizontal-layout-column>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined>2</zen-push-button>
+                </zen-horizontal-layout-column>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined>3</zen-push-button>
+                </zen-horizontal-layout-column>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined="::'last'">4</zen-push-button>
+                </zen-horizontal-layout-column>
+            </zen-horizontal-layout>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-horizontal-layout>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined="::'first'">1</zen-push-button>
+                </zen-horizontal-layout-column>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined>2</zen-push-button>
+                </zen-horizontal-layout-column>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined>3</zen-push-button>
+                </zen-horizontal-layout-column>
+                <zen-horizontal-layout-column zen-width="1">
+                    <zen-push-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                     zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                     zen-click="appCtrl.pushButtonOnClick()"
+                                     zen-conjoined="::'last'">4</zen-push-button>
+                </zen-horizontal-layout-column>
+            </zen-horizontal-layout>
+        </zen-vertical-layout-row>
+    </zen-vertical-layout>
+
+</zen-scroll-area>

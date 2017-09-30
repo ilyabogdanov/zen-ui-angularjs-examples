@@ -1,0 +1,43 @@
+<zen-scroll-area>
+
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Normal:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-number-field zen-stretch="::false"
+                              zen-placeholder="::'placeholder'"
+                              zen-model="appCtrl.tmpModel.numberField1"
+                              zen-suffix="::'DD'"></zen-number-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Stretch:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'" zen-height="::'5rem'">
+
+            <zen-number-field zen-stretch="::true"
+                              zen-placeholder="::''"
+                              zen-model="appCtrl.tmpModel.numberField2"></zen-number-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Disabled:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-number-field zen-stretch="::false"
+                              zen-disabled="::true"
+                              zen-model="appCtrl.tmpModel.numberField3"></zen-number-field>
+
+        </zen-vertical-layout-row>
+    </zen-vertical-layout>
+
+</zen-scroll-area>

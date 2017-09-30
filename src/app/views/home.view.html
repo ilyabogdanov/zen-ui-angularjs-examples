@@ -1,0 +1,58 @@
+
+<zen-scroll-area zen-style="{ background: 'white' }">
+    <zen-tree zen-stretch="::false">
+        <zen-tree-branch>
+            <zen-tree-branchlet zen-aggregative="::true" zen-open="true">
+                <zen-tree-leaf>
+                    <zen-tree-leaf-column zen-width="::'100%'">
+                        <zen-text>
+                            <b>Examples</b>
+                        </zen-text>
+                    </zen-tree-leaf-column>
+                </zen-tree-leaf>
+                <zen-tree-branch>
+                    <zen-tree-branchlet zen-aggregative="::false" zen-open="false" ng-repeat="item in appCtrl.examples">
+                        <zen-tree-leaf>
+                            <zen-tree-leaf-column zen-width="::'100%'">
+                                <zen-text>
+                                    <a ng-href="{{appCtrl.getExampleHref(item)}}" ng-bind="item"></a>
+                                </zen-text>
+                            </zen-tree-leaf-column>
+                        </zen-tree-leaf>
+                    </zen-tree-branchlet>
+                </zen-tree-branch>
+            </zen-tree-branchlet>
+            <zen-tree-branchlet zen-aggregative="::true" zen-open="true">
+                <zen-tree-leaf>
+                    <zen-tree-leaf-column zen-width="::'100%'">
+                        <zen-text>
+                            <b>Components</b>
+                        </zen-text>
+                    </zen-tree-leaf-column>
+                </zen-tree-leaf>
+                <zen-tree-branch>
+                    <zen-tree-branchlet zen-aggregative="::true" zen-open="true" ng-repeat="(group, items) in appCtrl.components">
+                        <zen-tree-leaf>
+                            <zen-tree-leaf-column zen-width="::'100%'">
+                                <zen-text>
+                                    <b ng-bind="group"></b>
+                                </zen-text>
+                            </zen-tree-leaf-column>
+                        </zen-tree-leaf>
+                        <zen-tree-branch>
+                            <zen-tree-branchlet zen-aggregative="::false" zen-open="false" ng-repeat="item in items">
+                                <zen-tree-leaf>
+                                    <zen-tree-leaf-column zen-width="::'100%'">
+                                        <zen-text>
+                                            <a ng-href="{{appCtrl.getComponentHref(item)}}" ng-bind="item"></a>
+                                        </zen-text>
+                                    </zen-tree-leaf-column>
+                                </zen-tree-leaf>
+                            </zen-tree-branchlet>
+                        </zen-tree-branch>
+                    </zen-tree-branchlet>
+                </zen-tree-branch>
+            </zen-tree-branchlet>
+        </zen-tree-branch>
+    </zen-tree>
+</zen-scroll-area>

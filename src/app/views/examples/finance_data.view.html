@@ -1,0 +1,68 @@
+<zen-modal>
+    <zen-window zen-min-width="::'18.5rem'" zen-max-width="::'24rem'" zen-palette="::ZEN.WINDOW.PALETTE.ORDINARY">
+        <zen-window-head>
+            <zen-window-head-title>Financial transactions</zen-window-head-title>
+        </zen-window-head>
+        <zen-window-body>
+            <zen-vertical-layout>
+                <zen-vertical-layout-row zen-padding="::'2px'">
+                    <zen-horizontal-layout zen-height="::'1.8rem'">
+                        <zen-horizontal-layout-column zen-width="::'100%'"></zen-horizontal-layout-column>
+                        <zen-horizontal-layout-column zen-width="::'5.6rem'">
+                            <zen-push-button zen-stretch="::ZEN.BUTTON.STRETCH.TRUE" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY">Sync</zen-push-button>
+                        </zen-horizontal-layout-column>
+                    </zen-horizontal-layout>
+                </zen-vertical-layout-row>
+                <zen-vertical-layout-row zen-padding="::'0 0 4px 0'">
+
+                    <zen-tree zen-stretch="::false" zen-divider="::true">
+                        <zen-tree-branch>
+                            <zen-tree-branchlet ng-repeat="e in appCtrl.exampleModel.ui2_data" zen-aggregative="::true" zen-open="true">
+                                <zen-tree-leaf>
+                                    <zen-tree-leaf-column zen-width="::'100%'">
+                                        <zen-text x="::'left'" y="::'middle'">
+                                            {{::e.year}}
+                                        </zen-text>
+                                    </zen-tree-leaf-column>
+                                    <zen-tree-leaf-column zen-width="::'5.6rem'"></zen-tree-leaf-column>
+                                </zen-tree-leaf>
+                                <zen-tree-branch>
+                                    <zen-tree-branchlet ng-repeat="e in e.months" zen-aggregative="::true" zen-open="true">
+                                        <zen-tree-leaf>
+                                            <zen-tree-leaf-column zen-width="::'100%'">
+                                                <zen-text x="::'left'" y="::'middle'">
+                                                    {{::e.month}}
+                                                </zen-text>
+                                            </zen-tree-leaf-column>
+                                            <zen-tree-leaf-column zen-width="::'5.6rem'"></zen-tree-leaf-column>
+                                        </zen-tree-leaf>
+                                        <zen-tree-branch>
+                                            <zen-tree-branchlet ng-repeat="e in e.contracts" zen-aggregative="::false" zen-open="false">
+                                                <zen-tree-leaf>
+                                                    <zen-tree-leaf-column zen-width="::'100%'" zen-padding="::'0 5px'">
+                                                        <zen-checkbox
+                                                                zen-disabled="::false"
+                                                                zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.LEFT"
+                                                                zen-model="e.active">
+                                                            <zen-text zen-clipped zen-style="{ opacity: e.active ? '1' : '0.2' }">{{::e.date}}</zen-text>
+                                                        </zen-checkbox>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::'5.6rem'" zen-padding="::'0 10px 0 5px'">
+                                                        <zen-text x="::'right'" zen-style="{ opacity: e.active ? '1' : '0.2' }">
+                                                            {{::e.sum}}
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                </zen-tree-leaf>
+                                            </zen-tree-branchlet>
+                                        </zen-tree-branch>
+                                    </zen-tree-branchlet>
+                                </zen-tree-branch>
+                            </zen-tree-branchlet>
+                        </zen-tree-branch>
+                    </zen-tree>
+
+                </zen-vertical-layout-row>
+            </zen-vertical-layout>
+        </zen-window-body>
+    </zen-window>
+</zen-modal>

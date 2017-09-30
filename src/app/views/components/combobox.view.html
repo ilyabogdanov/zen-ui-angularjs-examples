@@ -1,0 +1,44 @@
+<zen-scroll-area>
+
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Stretch:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-height="::'5rem'" zen-padding="::'5px'">
+            <zen-combobox zen-stretch="::true"
+                          zen-disabled="::false"
+                          zen-items="appCtrl.tmpModel.comboboxArray"
+                          zen-active-item="appCtrl.tmpModel.combobox1"
+                          zen-text-parameter="::'name'"
+                          zen-value-parameter="::'id'">
+            </zen-combobox>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Normal:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-combobox zen-stretch="::false"
+                          zen-disabled="::false"
+                          zen-items="appCtrl.tmpModel.comboboxArray"
+                          zen-active-item="appCtrl.tmpModel.combobox2"
+                          zen-text-parameter="::'name'"
+                          zen-value-parameter="::'id'">
+            </zen-combobox>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Disabled:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-combobox zen-stretch="::false"
+                          zen-disabled="::true"
+                          zen-items="appCtrl.tmpModel.comboboxArray"
+                          zen-active-item="appCtrl.tmpModel.combobox3"
+                          zen-text-parameter="::'name'"
+                          zen-value-parameter="::'id'">
+            </zen-combobox>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-height="::'5rem'"></zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-height="::'100%'"></zen-vertical-layout-row>
+    </zen-vertical-layout>
+
+</zen-scroll-area>

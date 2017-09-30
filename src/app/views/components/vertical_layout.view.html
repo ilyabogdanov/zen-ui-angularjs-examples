@@ -1,0 +1,21 @@
+
+<zen-vertical-layout zen-divider="true">
+    <zen-vertical-layout-row
+            zen-height="::e+'px'"
+            zen-padding='::"5px"'
+            ng-repeat="e in [8, 13, 21, 34]"
+            ng-style="{background: 'rgba(0,0,0,'+(0.01*e)+')'}">
+
+    </zen-vertical-layout-row>
+    <zen-vertical-layout-row zen-height="::'100%'" zen-padding="::'5px'" ng-style="{background: 'white'}">
+        <zen-text>stretch row</zen-text>
+    </zen-vertical-layout-row>
+    <zen-vertical-layout-row zen-height="::'2rem'" ng-style="{background: 'rgba(0,0,0,0.1)'}"></zen-vertical-layout-row>
+    <zen-vertical-layout-row zen-padding="::'5px'" ng-style="{background: 'rgba(0,0,0,0.1)'}">
+        <zen-text>no-height</zen-text>
+    </zen-vertical-layout-row>
+    <zen-vertical-layout-row zen-padding="::'5px'" ng-style="{background: 'rgba(0,0,0,0.1)'}">
+        <zen-text>no-height</zen-text>
+    </zen-vertical-layout-row>
+</zen-vertical-layout>
+

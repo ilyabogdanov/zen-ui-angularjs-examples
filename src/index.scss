@@ -1,0 +1,37 @@
+html {
+  font-size: 16px;
+}
+
+//noinspection SassScssResolvedByNameOnly
+@include static_raster_icons($collection: task_tracker_collection, $groups: (
+        project_status: (
+                in_progress,
+                scheduled,
+                planned,
+                finished,
+                canceled
+        ), monotone_task_severity: (
+                trivial,
+                minor,
+                major,
+                critical,
+                blocker
+        ), color_task_severity: (
+                trivial,
+                minor,
+                major,
+                critical,
+                blocker
+        ), task_status: (
+                resolved,
+                canceled,
+                duplicate,
+                in_progress,
+                open
+        ), task_type: (
+                task,
+                new_feature,
+                improvement,
+                bug
+        ),
+), $url: "img/zen_ui__example_icons__task_tracker.png", $size: 24px, $strut: true, $has_duplicate_glyph_names: true);

@@ -1,0 +1,29 @@
+{
+  "name": "zen-ui-angularjs-examples",
+  "description": "",
+  "version": "0.1.1",
+  "license": "Apache-2.0",
+  "keywords": [],
+  "author": "Ilya Bogdanov <public@ilyabogdanov.ru>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilyabogdanov/zen-ui-angularjs-examples.git"
+  },
+  "devDependencies": {
+    "connect-modrewrite": "^0.10.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-compress": "^1.4.3",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-jshint": "^1.1.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^3.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-html2js": "^0.5.1",
+    "grunt-ng-annotate": "^3.0.0",
+    "zen-ui-angularjs": "0.1.1",
+    "zen-ui-core": "0.1.1"
+  }
+}

@@ -1,0 +1,59 @@
+<zen-scroll-area>
+
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Normal:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-text-field zen-placeholder="::''"
+                            zen-error="(appCtrl.tmpModel.textfield1 && appCtrl.tmpModel.textfield1.length > 6)"
+                            zen-model="appCtrl.tmpModel.textfield1"
+                            zen-stretch="::false"></zen-text-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Password:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-password-field zen-placeholder="::''"
+                            zen-error="::false"
+                            zen-model="appCtrl.tmpModel.textfield2"
+                            zen-stretch="::false"></zen-password-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Stretch:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-height="::'5rem'" zen-padding="::'5px'">
+
+            <zen-text-field zen-placeholder="::''"
+                            zen-error="(appCtrl.tmpModel.textfield3 && appCtrl.tmpModel.textfield3.length > 6)"
+                            zen-model="appCtrl.tmpModel.textfield3"
+                            zen-stretch="::true"></zen-text-field>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+
+            <zen-text>Disabled:</zen-text>
+
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+
+            <zen-text-field zen-placeholder="::'Disabled'"
+                            zen-error="::false"
+                            zen-disabled="::true"
+                            zen-model="appCtrl.tmpModel.textfield4"
+                            zen-stretch="::false"></zen-text-field>
+
+        </zen-vertical-layout-row>
+    </zen-vertical-layout>
+
+</zen-scroll-area>

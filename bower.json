@@ -1,0 +1,16 @@
+{
+  "name": "zen-ui-angularjs-examples",
+  "description": "",
+  "version": "0.1.1",
+  "license": "Apache-2.0",
+  "keywords": [],
+  "author": "Ilya Bogdanov <public@ilyabogdanov.ru>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilyabogdanov/zen-ui-angularjs-examples.git"
+  },
+  "devDependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.6"
+  }
+}

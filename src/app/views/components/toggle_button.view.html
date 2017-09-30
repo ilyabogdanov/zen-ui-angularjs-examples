@@ -1,0 +1,121 @@
+<zen-scroll-area>
+
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Normal:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-toggle-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-model="appCtrl.tmpModel.toggleButton1">Ordinary</zen-toggle-button>
+            <zen-toggle-button zen-palette="::ZEN.BUTTON.PALETTE.BRANDED" zen-model="appCtrl.tmpModel.toggleButton2">Branded</zen-toggle-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Disabled:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-toggle-button zen-disabled="::true" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-model="appCtrl.tmpModel.toggleButton3">Ordinary</zen-toggle-button>
+            <zen-toggle-button zen-disabled zen-palette="::ZEN.BUTTON.PALETTE.BRANDED" zen-model="appCtrl.tmpModel.toggleButton4">Branded</zen-toggle-button>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Conjoined:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-conjoined-buttons>
+                <zen-toggle-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-model="appCtrl.tmpModel.toggleButton5">1</zen-toggle-button>
+                <zen-toggle-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-model="appCtrl.tmpModel.toggleButton6">2</zen-toggle-button>
+                <zen-toggle-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-model="appCtrl.tmpModel.toggleButton7">3</zen-toggle-button>
+                <zen-toggle-button zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY" zen-model="appCtrl.tmpModel.toggleButton8">4</zen-toggle-button>
+            </zen-conjoined-buttons>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px 5px 0 5px'">
+            <zen-text>Toggle group:</zen-text>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-toggle-group zen-conjoined>
+                <zen-toggle-radio ng-repeat="x in [1,2,3,4]"
+                                  zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                  zen-model="appCtrl.tmpModel.toggleGroup1"
+                                  zen-value="::x">{{::x}}</zen-toggle-radio>
+            </zen-toggle-group>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-toggle-group>
+                <zen-toggle-radio ng-repeat="x in [1,2,3,4]"
+                                  zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                  zen-model="appCtrl.tmpModel.toggleGroup2"
+                                  zen-value="::x">{{::x}}</zen-toggle-radio>
+            </zen-toggle-group>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-toggle-group>
+                <zen-horizontal-layout zen-height="::'5rem'">
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                          zen-model="appCtrl.tmpModel.toggleGroup4"
+                                          zen-conjoined="::'first'"
+                                          zen-value="::1">1</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                         zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                         zen-model="appCtrl.tmpModel.toggleGroup4"
+                                         zen-conjoined
+                                         zen-value="::2">2</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                         zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                         zen-model="appCtrl.tmpModel.toggleGroup4"
+                                         zen-conjoined
+                                         zen-value="::3">3</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-stretch="::ZEN.BUTTON.STRETCH.TRUE"
+                                          zen-model="appCtrl.tmpModel.toggleGroup4"
+                                          zen-conjoined="::'last'"
+                                          zen-value="::4">4</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                </zen-horizontal-layout>
+            </zen-toggle-group>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-toggle-group>
+                <zen-horizontal-layout>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                          zen-model="appCtrl.tmpModel.toggleGroup5"
+                                          zen-conjoined="::'first'"
+                                          zen-value="::1">1</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                          zen-model="appCtrl.tmpModel.toggleGroup5"
+                                          zen-conjoined
+                                          zen-value="::2">2</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                          zen-model="appCtrl.tmpModel.toggleGroup5"
+                                          zen-conjoined
+                                          zen-value="::3">3</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                    <zen-horizontal-layout-column zen-width="1">
+                        <zen-toggle-radio zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-stretch="::ZEN.BUTTON.STRETCH.ONLY_X"
+                                          zen-model="appCtrl.tmpModel.toggleGroup5"
+                                          zen-conjoined="::'last'"
+                                          zen-value="::4">4</zen-toggle-radio>
+                    </zen-horizontal-layout-column>
+                </zen-horizontal-layout>
+            </zen-toggle-group>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-height="::'100%'">
+
+        </zen-vertical-layout-row>
+    </zen-vertical-layout>
+
+</zen-scroll-area>

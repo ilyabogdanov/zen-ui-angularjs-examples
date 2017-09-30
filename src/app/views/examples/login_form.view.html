@@ -1,0 +1,26 @@
+<zen-modal>
+    <zen-window zen-max-width="::'20rem'" zen-palette="::ZEN.WINDOW.PALETTE.ORDINARY">
+        <zen-window-head>
+            <zen-window-head-title>Restricted Area</zen-window-head-title>
+        </zen-window-head>
+        <zen-window-body zen-padding="::'0 40px'">
+            <zen-vertical-layout>
+                <zen-vertical-layout-row zen-padding="::'26px 0 21px 0'">
+                    <zen-text>Authentication required</zen-text>
+                </zen-vertical-layout-row>
+                <zen-vertical-layout-row>
+                    <zen-text-field zen-model="appCtrl.exampleModel.ui1_login"></zen-text-field>
+                </zen-vertical-layout-row>
+                <zen-vertical-layout-row zen-height="::'4px'"></zen-vertical-layout-row>
+                <zen-vertical-layout-row>
+                    <zen-password-field zen-model="appCtrl.exampleModel.ui1_password"></zen-password-field>
+                </zen-vertical-layout-row>
+                <zen-vertical-layout-row zen-height="::'3px'"></zen-vertical-layout-row>
+                <zen-vertical-layout-row zen-height="::'2.4rem'">
+                    <zen-push-button zen-stretch="::ZEN.BUTTON.STRETCH.TRUE" zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY">Login</zen-push-button>
+                </zen-vertical-layout-row>
+                <zen-vertical-layout-row zen-height="::'2rem'"></zen-vertical-layout-row>
+            </zen-vertical-layout>
+        </zen-window-body>
+    </zen-window>
+</zen-modal>

@@ -1,0 +1,62 @@
+<zen-scroll-area>
+    <zen-vertical-layout>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-radio-group>
+                <zen-radio
+                        ng-repeat="e in [1,2]"
+                        zen-disabled="::false"
+                        zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.LEFT"
+                        zen-model="appCtrl.tmpModel.radioButton1"
+                        zen-value="::e">
+                    Normal
+                </zen-radio>
+                <zen-radio
+                        ng-repeat="e in [3,4]"
+                        zen-disabled="::true"
+                        zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.LEFT"
+                        zen-model="appCtrl.tmpModel.radioButton1"
+                        zen-value="::e">
+                    Disabled
+                </zen-radio>
+                <zen-radio
+                        zen-readonly
+                        ng-repeat="e in [5,6]"
+                        zen-disabled="::false"
+                        zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.LEFT"
+                        zen-model="appCtrl.tmpModel.radioButton1"
+                        zen-value="::e">
+                    Readonly
+                </zen-radio>
+            </zen-radio-group>
+        </zen-vertical-layout-row>
+        <zen-vertical-layout-row zen-padding="::'5px'">
+            <zen-radio-group>
+                <zen-radio
+                        ng-repeat="e in [1,2]"
+                        zen-disabled="::false"
+                        zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.RIGHT"
+                        zen-model="appCtrl.tmpModel.radioButton2"
+                        zen-value="::e">
+                    Normal. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </zen-radio>
+                <zen-radio
+                        ng-repeat="e in [3,4]"
+                        zen-disabled="::true"
+                        zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.RIGHT"
+                        zen-model="appCtrl.tmpModel.radioButton2"
+                        zen-value="::e">
+                    Disabled. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </zen-radio>
+                <zen-radio
+                        zen-readonly
+                        ng-repeat="e in [5,6]"
+                        zen-disabled="::false"
+                        zen-alignment="::ZEN.CHECKBOX.ALIGNMENT.RIGHT"
+                        zen-model="appCtrl.tmpModel.radioButton2"
+                        zen-value="::e">
+                    Readonly. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </zen-radio>
+            </zen-radio-group>
+        </zen-vertical-layout-row>
+    </zen-vertical-layout>
+</zen-scroll-area>

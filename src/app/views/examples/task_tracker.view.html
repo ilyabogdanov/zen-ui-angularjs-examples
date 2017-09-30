@@ -1,0 +1,128 @@
+<zen-modal>
+    <zen-window zen-max-width="::'24rem'" zen-palette="::ZEN.WINDOW.PALETTE.ORDINARY">
+        <zen-window-head>
+            <zen-window-head-title>Tasks</zen-window-head-title>
+        </zen-window-head>
+        <zen-window-body>
+            <zen-vertical-layout>
+                <zen-vertical-layout-row zen-padding="::'2px'">
+                    <zen-toggle-group zen-conjoined>
+                        <zen-toggle-radio ng-repeat="x in ['All', 'Open', 'My tasks', 'Following']"
+                                          zen-palette="::ZEN.BUTTON.PALETTE.ORDINARY"
+                                          zen-model="appCtrl.exampleModel.ui3_activeToggle"
+                                          zen-value="::x">{{::x}}</zen-toggle-radio>
+                    </zen-toggle-group>
+                </zen-vertical-layout-row>
+                <zen-vertical-layout-row zen-padding="::'0 0 4px 0'">
+
+                    <zen-tree zen-stretch="::false">
+                        <zen-tree-branch>
+                            <zen-tree-branchlet zen-aggregative="::true" zen-open="true">
+                                <zen-tree-leaf>
+                                    <zen-tree-leaf-column zen-width="::1">
+                                        <zen-text>
+                                            <b>Example Project</b>
+                                        </zen-text>
+                                    </zen-tree-leaf-column>
+                                </zen-tree-leaf>
+                                <zen-tree-branch>
+                                    <zen-tree-branchlet zen-aggregative="::true" zen-open="true">
+                                        <zen-tree-leaf>
+                                            <zen-tree-leaf-column zen-width="::'100%'">
+                                                <zen-text>
+                                                    <b>Tasks</b>
+                                                </zen-text>
+                                            </zen-tree-leaf-column>
+                                        </zen-tree-leaf>
+                                        <zen-tree-branch>
+                                            <zen-tree-branchlet ng-repeat="e in appCtrl.exampleModel.ui3_tasks" zen-aggregative="::false" zen-open="false">
+                                                <zen-tree-leaf>
+                                                    <zen-tree-leaf-column zen-width="::'1.5rem'">
+                                                        <zen-text>
+                                                            <zen-task-tracker-icon zen-glyph="::e.taskType"
+                                                                                   zen-group="::Task_Tracker_Icon_Groups.TASK_TYPE"></zen-task-tracker-icon>
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::'1.5rem'">
+                                                        <zen-text>
+                                                            <zen-task-tracker-icon zen-glyph="::e.severity"
+                                                                                   zen-group="::Task_Tracker_Icon_Groups.COLOR_TASK_SEVERITY"></zen-task-tracker-icon>
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::1" zen-padding="::'0 5px'">
+                                                        <zen-text zen-clipped>{{::e.name}}</zen-text>
+                                                    </zen-tree-leaf-column>
+                                                </zen-tree-leaf>
+                                            </zen-tree-branchlet>
+                                        </zen-tree-branch>
+                                    </zen-tree-branchlet>
+                                    <zen-tree-branchlet zen-aggregative="::true" zen-open="true">
+                                        <zen-tree-leaf>
+                                            <zen-tree-leaf-column zen-width="::'100%'">
+                                                <zen-text>
+                                                    <b>New Features</b>
+                                                </zen-text>
+                                            </zen-tree-leaf-column>
+                                        </zen-tree-leaf>
+                                        <zen-tree-branch>
+                                            <zen-tree-branchlet ng-repeat="e in appCtrl.exampleModel.ui3_new_features" zen-aggregative="::false" zen-open="false">
+                                                <zen-tree-leaf>
+                                                    <zen-tree-leaf-column zen-width="::'1.5rem'">
+                                                        <zen-text>
+                                                            <zen-task-tracker-icon zen-glyph="::e.taskType"
+                                                                                   zen-group="::Task_Tracker_Icon_Groups.TASK_TYPE"></zen-task-tracker-icon>
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::'1.5rem'">
+                                                        <zen-text>
+                                                            <zen-task-tracker-icon zen-glyph="::e.severity"
+                                                                                   zen-group="::Task_Tracker_Icon_Groups.COLOR_TASK_SEVERITY"></zen-task-tracker-icon>
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::1" zen-padding="::'0 5px'">
+                                                        <zen-text zen-clipped>{{::e.name}}</zen-text>
+                                                    </zen-tree-leaf-column>
+                                                </zen-tree-leaf>
+                                            </zen-tree-branchlet>
+                                        </zen-tree-branch>
+                                    </zen-tree-branchlet>
+                                    <zen-tree-branchlet zen-aggregative="::true" zen-open="true">
+                                        <zen-tree-leaf>
+                                            <zen-tree-leaf-column zen-width="::'100%'">
+                                                <zen-text>
+                                                    <b>Bugs</b>
+                                                </zen-text>
+                                            </zen-tree-leaf-column>
+                                        </zen-tree-leaf>
+                                        <zen-tree-branch>
+                                            <zen-tree-branchlet ng-repeat="e in appCtrl.exampleModel.ui3_bugs" zen-aggregative="::false" zen-open="false">
+                                                <zen-tree-leaf>
+                                                    <zen-tree-leaf-column zen-width="::'1.5rem'">
+                                                        <zen-text>
+                                                            <zen-task-tracker-icon zen-glyph="::e.taskType"
+                                                                                   zen-group="::Task_Tracker_Icon_Groups.TASK_TYPE"></zen-task-tracker-icon>
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::'1.5rem'">
+                                                        <zen-text>
+                                                            <zen-task-tracker-icon zen-glyph="::e.severity"
+                                                                                   zen-group="::Task_Tracker_Icon_Groups.COLOR_TASK_SEVERITY"></zen-task-tracker-icon>
+                                                        </zen-text>
+                                                    </zen-tree-leaf-column>
+                                                    <zen-tree-leaf-column zen-width="::1" zen-padding="::'0 5px'">
+                                                        <zen-text zen-clipped>{{::e.name}}</zen-text>
+                                                    </zen-tree-leaf-column>
+                                                </zen-tree-leaf>
+                                            </zen-tree-branchlet>
+                                        </zen-tree-branch>
+                                    </zen-tree-branchlet>
+                                </zen-tree-branch>
+                            </zen-tree-branchlet>
+                        </zen-tree-branch>
+                    </zen-tree>
+
+                </zen-vertical-layout-row>
+            </zen-vertical-layout>
+        </zen-window-body>
+    </zen-window>
+</zen-modal>
